@@ -6,7 +6,7 @@
       "name": "App_damagedCars.ipynb",
       "provenance": [],
       "machine_shape": "hm",
-      "authorship_tag": "ABX9TyOvmFuHcC6nTxh8GLJxW9V7",
+      "authorship_tag": "ABX9TyPBxzbI/GIKRz286FVGWbDg",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -262,31 +262,6 @@
       ],
       "execution_count": 16,
       "outputs": []
-    },
-    {
-      "cell_type": "code",
-      "metadata": {
-        "id": "jnw_sFUaHEJF",
-        "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 128
-        },
-        "outputId": "46a760b2-c691-435a-8425-be5ada2c3cee"
-      },
-      "source": [
-        ""
-      ],
-      "execution_count": 17,
-      "outputs": [
-        {
-          "output_type": "error",
-          "ename": "SyntaxError",
-          "evalue": "ignored",
-          "traceback": [
-            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipykernel_169/3479349232.py\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    streamlit run /usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py\u001b[0m\n\u001b[0m                ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
-          ]
-        }
-      ]
     }
   ]
 }
