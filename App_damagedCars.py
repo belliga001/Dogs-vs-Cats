@@ -6,7 +6,7 @@
       "name": "App_damagedCars.ipynb",
       "provenance": [],
       "machine_shape": "hm",
-      "authorship_tag": "ABX9TyPBxzbI/GIKRz286FVGWbDg",
+      "authorship_tag": "ABX9TyPe81uXyvu2dLjkA+KRNsex",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -36,7 +36,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "592ef50d-a5a7-432f-eaa2-e283248ebeb9"
+        "outputId": "51579ab7-6c6d-45a8-983b-ae7c3178bac9"
       },
       "source": [
         "!pip install -q streamlit\n",
@@ -48,15 +48,15 @@
         {
           "output_type": "stream",
           "text": [
-            "\u001b[K     |████████████████████████████████| 7.9 MB 4.9 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 111 kB 48.7 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 4.2 MB 49.8 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 75 kB 2.9 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 170 kB 45.0 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 122 kB 36.3 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 786 kB 34.6 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 368 kB 39.1 MB/s \n",
-            "\u001b[K     |████████████████████████████████| 63 kB 1.6 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 7.9 MB 12.8 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 75 kB 3.8 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 111 kB 81.3 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 4.2 MB 63.4 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 170 kB 76.1 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 122 kB 72.7 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 786 kB 35.7 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 368 kB 74.6 MB/s \n",
+            "\u001b[K     |████████████████████████████████| 63 kB 1.9 MB/s \n",
             "\u001b[?25h  Building wheel for blinker (setup.py) ... \u001b[?25l\u001b[?25hdone\n",
             "\u001b[31mERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n",
             "jupyter-console 5.2.0 requires prompt-toolkit<2.0.0,>=1.0.0, but you have prompt-toolkit 3.0.19 which is incompatible.\n",
@@ -74,7 +74,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "6c38cb33-606e-48f5-bd02-38711303f29b"
+        "outputId": "14211edd-0e56-4f57-fda5-503250edba3c"
       },
       "source": [
         "import streamlit as st\n",
@@ -89,7 +89,7 @@
         {
           "output_type": "stream",
           "text": [
-            "2021-07-29 11:12:52.027664: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0\n"
+            "2021-07-30 18:59:21.105815: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0\n"
           ],
           "name": "stderr"
         }
@@ -116,7 +116,7 @@
         "#from google.colab import drive\n",
         "#drive.mount(\"/content/gdrive\")"
       ],
-      "execution_count": 10,
+      "execution_count": 4,
       "outputs": []
     },
     {
@@ -130,7 +130,7 @@
         "#model = tf.keras.models.load_model(\"G:/Meu Drive/Bases_Colab/dogsandcats/model.h5\")\n",
         "#return model"
       ],
-      "execution_count": 11,
+      "execution_count": 5,
       "outputs": []
     },
     {
@@ -140,50 +140,52 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "df4a72bc-8ce5-4467-964f-989f7ced8052"
+        "outputId": "4ce2ddbe-128a-4cbd-e33c-f1d6886d0cdd"
       },
       "source": [
         "#model = tf.keras.models.load_model(\"G:/Meu Drive/Bases_Colab/dogsandcats/model.h5\")\n",
-        "model=tf.keras.models.load_model(\"model.h5\")\n",
+        "model=tf.keras.models.load_model(\"modeldemaged.h5\")\n",
         "#A unica maneira de funcionar foi de fazer o upload do modelo nos arquivos."
       ],
-      "execution_count": 14,
+      "execution_count": 6,
       "outputs": [
         {
           "output_type": "stream",
           "text": [
-            "2021-07-29 11:47:22.687250: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcuda.so.1\n",
-            "2021-07-29 11:47:22.774744: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:22.775767: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: \n",
-            "pciBusID: 0000:00:04.0 name: Tesla P100-PCIE-16GB computeCapability: 6.0\n",
-            "coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 15.90GiB deviceMemoryBandwidth: 681.88GiB/s\n",
-            "2021-07-29 11:47:22.775812: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0\n",
-            "2021-07-29 11:47:22.966204: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11\n",
-            "2021-07-29 11:47:22.966319: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11\n",
-            "2021-07-29 11:47:23.176956: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcufft.so.10\n",
-            "2021-07-29 11:47:23.244874: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcurand.so.10\n",
-            "2021-07-29 11:47:23.460271: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusolver.so.10\n",
-            "2021-07-29 11:47:23.524222: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusparse.so.11\n",
-            "2021-07-29 11:47:23.530550: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudnn.so.8\n",
-            "2021-07-29 11:47:23.530763: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:23.531941: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:23.537020: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0\n",
-            "2021-07-29 11:47:23.539469: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:23.540505: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: \n",
-            "pciBusID: 0000:00:04.0 name: Tesla P100-PCIE-16GB computeCapability: 6.0\n",
-            "coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 15.90GiB deviceMemoryBandwidth: 681.88GiB/s\n",
-            "2021-07-29 11:47:23.540588: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:23.541482: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:23.542365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0\n",
-            "2021-07-29 11:47:23.548738: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0\n",
-            "2021-07-29 11:47:26.323970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:\n",
-            "2021-07-29 11:47:26.324029: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 \n",
-            "2021-07-29 11:47:26.324040: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N \n",
-            "2021-07-29 11:47:26.324258: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:26.325207: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:26.326159: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
-            "2021-07-29 11:47:26.327146: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:39] Overriding allow_growth setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.\n",
-            "2021-07-29 11:47:26.327202: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15433 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:00:04.0, compute capability: 6.0)\n"
+            "2021-07-30 19:03:02.616178: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcuda.so.1\n",
+            "2021-07-30 19:03:02.715022: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:02.715778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: \n",
+            "pciBusID: 0000:00:04.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0\n",
+            "coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s\n",
+            "2021-07-30 19:03:02.715825: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0\n",
+            "2021-07-30 19:03:02.826328: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11\n",
+            "2021-07-30 19:03:02.826464: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11\n",
+            "2021-07-30 19:03:03.002312: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcufft.so.10\n",
+            "2021-07-30 19:03:03.044180: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcurand.so.10\n",
+            "2021-07-30 19:03:03.319336: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusolver.so.10\n",
+            "2021-07-30 19:03:03.350084: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusparse.so.11\n",
+            "2021-07-30 19:03:03.360537: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudnn.so.8\n",
+            "2021-07-30 19:03:03.360700: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:03.361373: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:03.365864: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0\n",
+            "2021-07-30 19:03:03.367058: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F\n",
+            "To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.\n",
+            "2021-07-30 19:03:03.367478: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:03.368214: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: \n",
+            "pciBusID: 0000:00:04.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0\n",
+            "coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s\n",
+            "2021-07-30 19:03:03.368335: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:03.369031: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:03.369657: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0\n",
+            "2021-07-30 19:03:03.374498: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0\n",
+            "2021-07-30 19:03:05.997170: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:\n",
+            "2021-07-30 19:03:05.997219: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 \n",
+            "2021-07-30 19:03:05.997229: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N \n",
+            "2021-07-30 19:03:05.997442: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:05.998056: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:05.998654: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero\n",
+            "2021-07-30 19:03:05.999239: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:39] Overriding allow_growth setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.\n",
+            "2021-07-30 19:03:05.999291: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14682 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)\n"
           ],
           "name": "stderr"
         }
@@ -196,7 +198,7 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "d3020905-b95e-468a-ef25-d1d9752b68be"
+        "outputId": "a834accf-34d4-49c2-dc90-affd4ec52ebe"
       },
       "source": [
         "st.markdown(\"# Aplicativo da web de predição de cães x gatos\", unsafe_allow_html = True)\n",
@@ -209,12 +211,12 @@
         "st.markdown(\"* Faça upload de um arquivo de imagem abaixo e clique no botão 'Prever' que aparece abaixo da imagem enviada para fazer as previsões.\", unsafe_allow_html = True)\n",
         "uploaded_file = st.file_uploader(\"Imagem de carro quebrado / intacto a ser carregada.\", type=['png','jpeg','jpg'])"
       ],
-      "execution_count": 15,
+      "execution_count": 7,
       "outputs": [
         {
           "output_type": "stream",
           "text": [
-            "2021-07-29 11:47:35.387 \n",
+            "2021-07-30 19:03:15.479 \n",
             "  \u001b[33m\u001b[1mWarning:\u001b[0m to view this Streamlit app on a browser, run it with the following\n",
             "  command:\n",
             "\n",
@@ -260,7 +262,7 @@
         "        else:\n",
         "            st.markdown(\"* ### A imagem é um carro intacto\", unsafe_allow_html = True)"
       ],
-      "execution_count": 16,
+      "execution_count": 8,
       "outputs": []
     }
   ]
