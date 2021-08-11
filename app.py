@@ -14,17 +14,17 @@ def load_model():
 
 model = load_model()
 
-st.markdown("# Dogs vs. Cats prediction web-app", unsafe_allow_html = True)
+st.markdown("# Aplicativo para detectar os motores defeituosos", unsafe_allow_html = True)
 st.markdown("---", unsafe_allow_html = True)
-st.markdown("* This is a simple web-app which predicts whether the image that the user uploads contains a cat or a dog.", unsafe_allow_html = True)
-st.markdown("* Connect with me at - https://www.linkedin.com/in/yashwardhan-banta-6566461ab/.", unsafe_allow_html = True)
-st.markdown("* GitHub repo (I would appreciate it if you could star it) - https://github.com/yashuwar/Dogs-vs-Cats.",  unsafe_allow_html = True)
+st.markdown("* Insira a imagem do motor e o detector irá avalia-lo ", unsafe_allow_html = True)
+st.markdown("* xxxxx", unsafe_allow_html = True)
+st.markdown("* xxxxx",  unsafe_allow_html = True)
 st.markdown("---", unsafe_allow_html = True)
 
-st.markdown("# Predictor", unsafe_allow_html = True)
+st.markdown("# Predicão", unsafe_allow_html = True)
 st.markdown("---", unsafe_allow_html = True)
-st.markdown("* Upload an image file below and click on the 'Predict' button that appears below the uploaded image to make the predictions.", unsafe_allow_html = True)
-uploaded_file = st.file_uploader("Image of cat/dog to be uploaded.", type=['png','jpeg','jpg'])
+st.markdown("* Insira uma imagem e  clique em 'Predicão', o sistema retornarã sua predição", unsafe_allow_html = True)
+uploaded_file = st.file_uploader("Imagem do motor.", type=['png','jpeg','jpg'])
 
 if uploaded_file is not None:
 
@@ -33,7 +33,7 @@ if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption = 'Uploaded file.', use_column_width = True)
     
-    bl = st.button("Predict")
+    bl = st.button("Predicão")
     
     if bl:
         
@@ -52,12 +52,12 @@ if uploaded_file is not None:
         label = label[0][0]
                           
         if label==1:
-            st.markdown("* ### The image is of a Dog.", unsafe_allow_html = True)
+            st.markdown("* ### A iamgem não tem defeito.", unsafe_allow_html = True)
         else:
-            st.markdown("* ### The image is of a Cat.", unsafe_allow_html = True)
+            st.markdown("* ### A imagem tem defeito", unsafe_allow_html = True)
         
         st.markdown("---", unsafe_allow_html = True)
-        st.markdown("### Thank you for using this web-app.", unsafe_allow_html = True)
+        st.markdown("### Muito obrigado por usar este aplicativo", unsafe_allow_html = True)
         st.markdown("---", unsafe_allow_html = True)
     else:
-        print("Please click the button to make predictions.")
+        print("Por favor pressione o botão e façãouma predição.")
